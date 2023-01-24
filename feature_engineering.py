@@ -10,10 +10,5 @@ def feature_engineering():
     dataset.drop(['DATE_DIED'], axis = 1, inplace = True)
     #print(dataset.head())
 
-
-    dataset.to_csv('cleaned.csv')
-    print("DVC process start")
-    dvc()
-
     return dataset
 
