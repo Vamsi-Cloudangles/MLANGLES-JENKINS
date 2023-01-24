@@ -20,7 +20,7 @@ def upload_files(file_name, bucket, object_name=None, args=None):
 
 def dvc():
     #upload_files('cleaned.csv', 'sagemaker-vamsi')
-    os.system('pip3 install dvc[s3] boto3')
+    os.system('pip3 install dvc[s3]')
 
     os.system("git init")
     os.system("dvc init -f")
