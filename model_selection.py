@@ -10,10 +10,17 @@ knc = KNeighborsClassifier()
 from sklearn.metrics import precision_score, recall_score, f1_score, accuracy_score
 import pickle
 import warnings
+from dvc import dvc
+
+
+
+
 warnings.filterwarnings("ignore")
 def model_selection():
+
     scores = []
     x_train, x_test, y_train, y_test = data_preprocessing()
+    print("Training")
     lr.fit(x_train, y_train)
     scores.append(lr.score(x_test, y_test))
     rfr.fit(x_train, y_train)
@@ -32,4 +39,6 @@ def model_selection():
     with open("model.pkl", 'wb') as p:
         pickle.dump(rfr,p)
     return scores
+
+    
 model_selection()
