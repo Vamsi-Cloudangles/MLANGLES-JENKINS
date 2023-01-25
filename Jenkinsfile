@@ -42,6 +42,11 @@ pipeline{
                 sh 'python3 feature_selection.py'
             }
         }
+        stage("dvc"){
+            steps{
+                sh 'python3 dvc.py'
+            }
+        }
         stage("data preprocessing"){
             steps{
                 sh 'python3 data_preprocessing.py'
