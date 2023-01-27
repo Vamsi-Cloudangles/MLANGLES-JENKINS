@@ -7,7 +7,7 @@ def data_preprocessing():
 
 
 
-    dataset = feature_engineering()
+    ataset = feature_engineering()
     x = dataset.drop(['PATIENT_STATUS'], axis = 1)
     y = dataset.drop(x.columns, axis = 1)
     print(x.shape)
@@ -21,3 +21,4 @@ def data_preprocessing():
     print(x_train.shape)
     print(y_train.shape)
     return x_train, x_test, y_train, y_test
+data_preprocessing()
