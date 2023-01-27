@@ -2,7 +2,7 @@ from data_cleaning import data_cleaning
 from dvc import dvc
 
 def feature_engineering():
-    dataset = data_cleaning()
+    ataset = data_cleaning()
     for col in dataset.columns:
         print(col, len(dataset[col].unique()))
     # Rename the "DATE_DIED" column to "PATIENT_STATUS" and make "9999-99-99" as alive(1) and others as dead(2)
